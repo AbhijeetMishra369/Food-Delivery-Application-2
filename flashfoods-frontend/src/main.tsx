@@ -1,0 +1,30 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material'
+import { SnackbarProvider } from 'notistack'
+import App from './App'
+import { store } from './store'
+
+const theme = createTheme({
+  palette: {
+    mode: 'light'
+  }
+})
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <BrowserRouter>
+          <SnackbarProvider maxSnack={3} autoHideDuration={2500}>
+            <App />
+          </SnackbarProvider>
+        </BrowserRouter>
+      </ThemeProvider>
+    </Provider>
+  </StrictMode>
+)
