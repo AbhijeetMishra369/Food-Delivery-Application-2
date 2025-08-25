@@ -1,24 +1,49 @@
-import { Button, Stack, Typography } from '@mui/material'
+import { Button, Rating, Stack, TextField, Typography } from '@mui/material'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import api from '../lib/api'
+import { useSnackbar } from 'notistack'
 
 type Restaurant = { id: number; name: string; description?: string; logoUrl?: string }
 type MenuItem = { id: number; name: string; description?: string; priceCents: number; imageUrl?: string }
+
+type Review = { id: number; rating: number; comment: string }
 
 export default function RestaurantDetail() {
   const { id } = useParams()
   const [restaurant, setRestaurant] = useState<Restaurant | null>(null)
   const [menu, setMenu] = useState<MenuItem[]>([])
+  const [reviews, setReviews] = useState<Review[]>([])
+  const [rating, setRating] = useState<number | null>(5)
+  const [comment, setComment] = useState('')
+  const { enqueueSnackbar } = useSnackbar()
 
-  useEffect(() => {
+  const load = () => {
     if (!id) return
     api.get(`/api/restaurants/${id}`).then(res => setRestaurant(res.data))
     api.get(`/api/menu/restaurant/${id}`).then(res => setMenu(res.data))
-  }, [id])
+    api.get(`/api/reviews/restaurant/${id}`).then(res => setReviews(res.data))
+  }
+
+  useEffect(() => { load() }, [id])
 
   const addToCart = (menuItemId: number) => {
-    api.post(`/api/cart/add/${menuItemId}?qty=1`).catch(() => {})
+    api.post(`/api/cart/add/${menuItemId}?qty=1`).then(() => enqueueSnackbar('Added to cart', { variant: 'success' })).catch(() => {})
+  }
+
+  const submitReview = async () => {
+    if (!id) return
+    if (!rating || rating < 1) { enqueueSnackbar('Please select a rating', { variant: 'warning' }); return }
+    if (comment.trim().length < 5) { enqueueSnackbar('Please write a short comment (min 5 chars)', { variant: 'warning' }); return }
+    try {
+      await api.post(`/api/reviews/restaurant/${id}`, { rating, comment })
+      setComment('')
+      setRating(5)
+      enqueueSnackbar('Thanks for the review!', { variant: 'success' })
+      load()
+    } catch (e: any) {
+      enqueueSnackbar(e?.response?.data?.message || 'Could not submit review', { variant: 'error' })
+    }
   }
 
   return (
@@ -48,6 +73,23 @@ export default function RestaurantDetail() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="space-y-3">
+        <Typography variant="h6" fontWeight={700}>Ratings & Reviews</Typography>
+        <div className="border rounded-lg p-3 space-y-2">
+          <div className="flex items-center gap-3">
+            <Rating value={rating} onChange={(_, v) => setRating(v)} />
+            <TextField size="small" placeholder="Share your experience" value={comment} onChange={e => setComment(e.target.value)} fullWidth />
+            <Button variant="contained" onClick={submitReview}>Submit</Button>
+          </div>
+          {reviews.length === 0 && <div className="text-sm text-gray-600">No reviews yet. Be the first!</div>}
+          {reviews.map(r => (
+            <div key={r.id} className="border rounded p-2">
+              <div className="flex items-center gap-2"><Rating value={r.rating} readOnly size="small" /><Typography variant="body2" color="text.secondary">{r.comment}</Typography></div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
