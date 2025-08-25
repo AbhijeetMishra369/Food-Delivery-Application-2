@@ -1,9 +1,11 @@
 package com.flashfoods.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "favorites", uniqueConstraints = @UniqueConstraint(columnNames = {"user_id","restaurant_id"}))
+@JsonIgnoreProperties({"user"})
 public class Favorite {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

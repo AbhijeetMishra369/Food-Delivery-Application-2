@@ -1,9 +1,11 @@
 package com.flashfoods.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "menu_items")
+@JsonIgnoreProperties({"restaurant"})
 public class MenuItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

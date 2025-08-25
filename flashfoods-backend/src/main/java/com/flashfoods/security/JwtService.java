@@ -7,7 +7,9 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.nio.charset.StandardCharsets;
 import java.security.Key;
+import java.security.MessageDigest;
 import java.util.Date;
 import java.util.Map;
 
@@ -20,7 +22,14 @@ public class JwtService {
             @Value("${app.jwt.secret}") String secret,
             @Value("${app.jwt.expirationMs}") long expirationMs
     ) {
-        this.key = Keys.hmacShaKeyFor(secret.getBytes());
+        try {
+            // Derive a 256-bit key from the provided secret to satisfy HS256 requirements
+            MessageDigest sha256 = MessageDigest.getInstance("SHA-256");
+            byte[] derived = sha256.digest(secret.getBytes(StandardCharsets.UTF_8));
+            this.key = Keys.hmacShaKeyFor(derived);
+        } catch (Exception e) {
+            throw new IllegalStateException("Failed to initialize JWT key", e);
+        }
         this.expirationMs = expirationMs;
     }
 
