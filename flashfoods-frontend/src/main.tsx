@@ -4,6 +4,7 @@ import './index.css'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material'
+import { SnackbarProvider } from 'notistack'
 import App from './App'
 import { store } from './store'
 
@@ -19,7 +20,9 @@ createRoot(document.getElementById('root')!).render(
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <BrowserRouter>
-          <App />
+          <SnackbarProvider maxSnack={3} autoHideDuration={2500}>
+            <App />
+          </SnackbarProvider>
         </BrowserRouter>
       </ThemeProvider>
     </Provider>
