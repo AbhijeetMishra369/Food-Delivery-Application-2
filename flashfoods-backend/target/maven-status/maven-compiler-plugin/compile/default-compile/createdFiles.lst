@@ -1,1 +1,16 @@
+com/flashfoods/web/RestaurantController.class
+com/flashfoods/security/AppUserDetailsService.class
 com/flashfoods/FlashfoodsBackendApplication.class
+com/flashfoods/security/SecurityConfig.class
+com/flashfoods/security/JwtService.class
+com/flashfoods/web/AuthController$RegisterRequest.class
+com/flashfoods/web/AuthController$LoginRequest.class
+com/flashfoods/domain/entity/Role.class
+com/flashfoods/domain/entity/MenuItem.class
+com/flashfoods/domain/repo/RestaurantRepository.class
+com/flashfoods/security/JwtAuthFilter.class
+com/flashfoods/domain/repo/MenuItemRepository.class
+com/flashfoods/domain/entity/User.class
+com/flashfoods/domain/entity/Restaurant.class
+com/flashfoods/web/AuthController.class
+com/flashfoods/domain/repo/UserRepository.class
