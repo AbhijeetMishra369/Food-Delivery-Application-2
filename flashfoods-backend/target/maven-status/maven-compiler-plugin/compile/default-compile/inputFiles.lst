@@ -19,6 +19,7 @@
 /workspace/flashfoods-backend/src/main/java/com/flashfoods/domain/repo/CouponRepository.java
 /workspace/flashfoods-backend/src/main/java/com/flashfoods/domain/entity/OrderStatus.java
 /workspace/flashfoods-backend/src/main/java/com/flashfoods/security/SecurityConfig.java
+/workspace/flashfoods-backend/src/main/java/com/flashfoods/web/GlobalExceptionHandler.java
 /workspace/flashfoods-backend/src/main/java/com/flashfoods/web/RestaurantController.java
 /workspace/flashfoods-backend/src/main/java/com/flashfoods/web/CurrentUser.java
 /workspace/flashfoods-backend/src/main/java/com/flashfoods/domain/entity/Restaurant.java

@@ -33,6 +33,7 @@ com/flashfoods/web/OrderController$1.class
 com/flashfoods/web/AuthController$LoginRequest.class
 com/flashfoods/domain/entity/Role.class
 com/flashfoods/BootstrapData.class
+com/flashfoods/web/GlobalExceptionHandler.class
 com/flashfoods/web/CartController.class
 com/flashfoods/web/MailService.class
 com/flashfoods/domain/entity/Restaurant.class

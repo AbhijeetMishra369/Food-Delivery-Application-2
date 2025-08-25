@@ -1,5 +1,7 @@
-import { Card, CardActionArea, CardContent, CardMedia, IconButton, Rating, Stack, Typography } from '@mui/material'
+import { Card, CardActionArea, CardContent, CardMedia, IconButton, Rating, Stack, Typography, Chip } from '@mui/material'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import AccessTimeIcon from '@mui/icons-material/AccessTime'
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee'
 
 export type RestaurantCardProps = {
   name: string
@@ -21,8 +23,10 @@ export function RestaurantCard(props: RestaurantCardProps) {
           <IconButton size="small" className="!absolute top-2 right-2 bg-white/90">
             <FavoriteBorderIcon fontSize="small" />
           </IconButton>
-          <div className="absolute bottom-2 left-3 text-white text-sm font-medium bg-black/40 px-2 py-0.5 rounded">
-            {deliveryTimeMin}-{deliveryTimeMin + 10} mins
+          <div className="absolute bottom-2 left-3 flex gap-2">
+            <Chip size="small" color="success" label={`${rating.toFixed(1)} ★`} />
+            <Chip size="small" icon={<AccessTimeIcon />} label={`${deliveryTimeMin}-${deliveryTimeMin + 10} mins`} />
+            <Chip size="small" icon={<CurrencyRupeeIcon />} label={priceForTwo} />
           </div>
         </div>
         <CardContent>
@@ -32,8 +36,6 @@ export function RestaurantCard(props: RestaurantCardProps) {
             <Stack direction="row" spacing={1} alignItems="center">
               <Rating name="read-only" size="small" value={rating} precision={0.1} readOnly />
               <Typography variant="caption" color="text.secondary">{rating.toFixed(1)}</Typography>
-              <Typography variant="caption">•</Typography>
-              <Typography variant="caption" color="text.secondary">{priceForTwo}</Typography>
             </Stack>
           </Stack>
         </CardContent>
