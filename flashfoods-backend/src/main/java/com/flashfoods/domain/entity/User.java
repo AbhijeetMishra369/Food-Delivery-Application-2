@@ -28,6 +28,9 @@ public class User {
 
     private Instant createdAt = Instant.now();
 
+    private String resetToken;
+    private Instant resetTokenExpiresAt;
+
     // getters and setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -45,5 +48,9 @@ public class User {
     public void setAvatarUrl(String avatarUrl) { this.avatarUrl = avatarUrl; }
     public Instant getCreatedAt() { return createdAt; }
     public void setCreatedAt(Instant createdAt) { this.createdAt = createdAt; }
+    public String getResetToken() { return resetToken; }
+    public void setResetToken(String resetToken) { this.resetToken = resetToken; }
+    public Instant getResetTokenExpiresAt() { return resetTokenExpiresAt; }
+    public void setResetTokenExpiresAt(Instant resetTokenExpiresAt) { this.resetTokenExpiresAt = resetTokenExpiresAt; }
 }
 
