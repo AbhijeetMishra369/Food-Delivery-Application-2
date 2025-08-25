@@ -24,7 +24,7 @@ public class MenuController {
     @GetMapping("/restaurant/{restaurantId}")
     public List<MenuItem> list(@PathVariable Long restaurantId) {
         Restaurant r = restaurantRepository.findById(restaurantId).orElseThrow();
-        return menuItemRepository.findAll().stream().filter(mi -> mi.getRestaurant() != null && mi.getRestaurant().getId().equals(r.getId())).toList();
+        return menuItemRepository.findByRestaurant(r);
     }
 
     @PreAuthorize("hasAnyRole('ADMIN','OWNER')")

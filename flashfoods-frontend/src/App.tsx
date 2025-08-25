@@ -5,7 +5,8 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined'
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
 import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined'
-import { Routes, Route, Navigate, Link as RouterLink } from 'react-router-dom'
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined'
+import { Routes, Route, Navigate, Link as RouterLink, useNavigate } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
@@ -15,8 +16,13 @@ import Orders from './pages/Orders'
 import Favorites from './pages/Favorites'
 import AdminDashboard from './pages/AdminDashboard'
 import ProtectedRoute from './components/ProtectedRoute'
+import { getCurrentUser } from './lib/auth'
 
 function App() {
+  const user = getCurrentUser()
+  const navigate = useNavigate()
+  const logout = () => { localStorage.removeItem('token'); navigate('/login') }
+
   return (
     <Box>
       <AppBar position="sticky" color="inherit" elevation={0} className="border-b">
@@ -30,8 +36,14 @@ function App() {
           <IconButton component={RouterLink} to="/favorites" color="inherit"><FavoriteBorderIcon /></IconButton>
           <IconButton component={RouterLink} to="/orders" color="inherit"><ReceiptLongOutlinedIcon /></IconButton>
           <IconButton component={RouterLink} to="/cart" color="inherit"><ShoppingCartOutlinedIcon /></IconButton>
-          <IconButton component={RouterLink} to="/admin" color="inherit"><DashboardOutlinedIcon /></IconButton>
-          <IconButton component={RouterLink} to="/login" color="inherit"><LoginOutlinedIcon /></IconButton>
+          {user?.role !== 'CUSTOMER' && (
+            <IconButton component={RouterLink} to="/admin" color="inherit"><DashboardOutlinedIcon /></IconButton>
+          )}
+          {!user ? (
+            <IconButton component={RouterLink} to="/login" color="inherit"><LoginOutlinedIcon /></IconButton>
+          ) : (
+            <IconButton onClick={logout} color="inherit"><LogoutOutlinedIcon /></IconButton>
+          )}
         </Toolbar>
       </AppBar>
       <Container maxWidth="lg" className="min-h-screen py-6">
