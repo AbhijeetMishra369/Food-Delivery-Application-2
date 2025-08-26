@@ -71,6 +71,23 @@ export default function AdminDashboard() {
         <IconButton size="small" onClick={load}><RefreshIcon /></IconButton>
       </Stack>
 
+      {!restaurant && (
+        <div className="border rounded-lg p-3 space-y-2">
+          <Typography fontWeight={700}>Create Your Restaurant</Typography>
+          <Stack direction="row" spacing={1}>
+            <TextField size="small" label="Name" value={newItem.name} onChange={e => setNewItem(v => ({ ...v, name: e.target.value }))} fullWidth />
+            <TextField size="small" label="City" value={newItem.description} onChange={e => setNewItem(v => ({ ...v, description: e.target.value }))} fullWidth />
+          </Stack>
+          <Button variant="contained" onClick={async () => {
+            try {
+              const res = await api.post('/api/restaurants', { name: newItem.name || 'My Restaurant', city: newItem.description || 'City' })
+              setRestaurant(res.data)
+              enqueueSnackbar('Restaurant created', { variant: 'success' })
+            } catch { enqueueSnackbar('Failed to create restaurant', { variant: 'error' }) }
+          }}>Create</Button>
+        </div>
+      )}
+
       <div className="border rounded-lg p-3 space-y-3">
         <Typography fontWeight={700}>Add Menu Item</Typography>
         <Stack direction="row" spacing={1}>

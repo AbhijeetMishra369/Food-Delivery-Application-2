@@ -4,6 +4,7 @@ com/flashfoods/domain/entity/OrderStatus.class
 com/flashfoods/domain/entity/Review.class
 com/flashfoods/web/AddressController.class
 com/flashfoods/web/ReviewController$ReviewBody.class
+com/flashfoods/web/AuthController$RegisterOwnerRequest.class
 com/flashfoods/domain/repo/OrderRepository.class
 com/flashfoods/web/UserController.class
 com/flashfoods/web/CurrentUser.class

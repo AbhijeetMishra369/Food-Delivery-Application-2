@@ -22,6 +22,7 @@ import java.util.UUID;
 public class AuthController {
 
     record RegisterRequest(@Email String email, @NotBlank String password, @NotBlank String fullName) {}
+    record RegisterOwnerRequest(@Email String email, @NotBlank String password, @NotBlank String fullName) {}
     record LoginRequest(@Email String email, @NotBlank String password) {}
     record ForgotPasswordRequest(@Email String email) {}
     record ResetPasswordRequest(@NotBlank String token, @NotBlank String newPassword) {}
@@ -50,6 +51,21 @@ public class AuthController {
         user.setPasswordHash(passwordEncoder.encode(body.password()));
         user.setFullName(body.fullName());
         user.setRole(Role.CUSTOMER);
+        userRepository.save(user);
+        String token = jwtService.generateToken(user.getEmail(), Map.of("role", user.getRole().name(), "name", user.getFullName()));
+        return ResponseEntity.ok(Map.of("token", token));
+    }
+
+    @PostMapping("/register-owner")
+    public ResponseEntity<?> registerOwner(@Valid @RequestBody RegisterOwnerRequest body) {
+        if (userRepository.existsByEmail(body.email())) {
+            return ResponseEntity.badRequest().body(Map.of("message", "Email already in use"));
+        }
+        User user = new User();
+        user.setEmail(body.email());
+        user.setPasswordHash(passwordEncoder.encode(body.password()));
+        user.setFullName(body.fullName());
+        user.setRole(Role.OWNER);
         userRepository.save(user);
         String token = jwtService.generateToken(user.getEmail(), Map.of("role", user.getRole().name(), "name", user.getFullName()));
         return ResponseEntity.ok(Map.of("token", token));
