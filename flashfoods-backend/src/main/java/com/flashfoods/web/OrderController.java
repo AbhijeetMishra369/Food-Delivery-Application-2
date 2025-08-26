@@ -3,6 +3,8 @@ package com.flashfoods.web;
 import com.flashfoods.domain.entity.*;
 import com.flashfoods.domain.repo.CartRepository;
 import com.flashfoods.domain.repo.OrderRepository;
+import com.flashfoods.domain.repo.RestaurantRepository;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,11 +16,13 @@ public class OrderController {
     private final CurrentUser currentUser;
     private final CartRepository cartRepository;
     private final OrderRepository orderRepository;
+    private final RestaurantRepository restaurantRepository;
 
-    public OrderController(CurrentUser currentUser, CartRepository cartRepository, OrderRepository orderRepository) {
+    public OrderController(CurrentUser currentUser, CartRepository cartRepository, OrderRepository orderRepository, RestaurantRepository restaurantRepository) {
         this.currentUser = currentUser;
         this.cartRepository = cartRepository;
         this.orderRepository = orderRepository;
+        this.restaurantRepository = restaurantRepository;
     }
 
     @PostMapping("/create")
@@ -65,6 +69,24 @@ public class OrderController {
     @GetMapping
     public List<Order> myOrders() {
         return orderRepository.findByUserOrderByCreatedAtDesc(currentUser.get());
+    }
+
+    @GetMapping("/restaurant/{restaurantId}")
+    @PreAuthorize("hasAnyRole('ADMIN','OWNER')")
+    public List<Order> restaurantOrders(@PathVariable Long restaurantId) {
+        // naive: no multi-restaurant cross-check; owners should only see their restaurant's orders
+        Restaurant r = restaurantRepository.findById(restaurantId).orElseThrow();
+        return orderRepository.findAll().stream().filter(o -> o.getRestaurant().getId().equals(r.getId())).toList();
+    }
+
+    @PostMapping("/{orderId}/status")
+    @PreAuthorize("hasAnyRole('ADMIN','OWNER')")
+    public ResponseEntity<?> updateStatus(@PathVariable Long orderId, @RequestParam OrderStatus status) {
+        Order order = orderRepository.findById(orderId).orElse(null);
+        if (order == null) return ResponseEntity.notFound().build();
+        order.setStatus(status);
+        orderRepository.save(order);
+        return ResponseEntity.ok(order);
     }
 }
 

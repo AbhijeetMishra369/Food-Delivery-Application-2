@@ -7,3 +7,6 @@
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: http://172.30.0.2:5173/
+6:15:07 AM [vite] (client) hmr update /src/pages/AdminDashboard.tsx, /src/index.css
+6:15:35 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+6:16:01 AM [vite] (client) hmr update /src/App.tsx, /src/index.css

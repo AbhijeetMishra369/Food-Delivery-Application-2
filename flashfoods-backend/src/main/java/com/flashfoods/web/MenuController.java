@@ -9,6 +9,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.data.domain.PageRequest;
 
 @RestController
 @RequestMapping("/api/menu")
@@ -19,6 +20,11 @@ public class MenuController {
     public MenuController(MenuItemRepository menuItemRepository, RestaurantRepository restaurantRepository) {
         this.menuItemRepository = menuItemRepository;
         this.restaurantRepository = restaurantRepository;
+    }
+
+    @GetMapping("/popular")
+    public List<MenuItem> popular() {
+        return menuItemRepository.findPopularLimited(PageRequest.of(0, 20));
     }
 
     @GetMapping("/restaurant/{restaurantId}")

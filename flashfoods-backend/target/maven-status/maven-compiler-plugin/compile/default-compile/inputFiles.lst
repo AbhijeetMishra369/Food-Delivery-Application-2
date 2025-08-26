@@ -1,3 +1,4 @@
+/workspace/flashfoods-backend/src/main/java/com/flashfoods/seed/DataSeeder.java
 /workspace/flashfoods-backend/src/main/java/com/flashfoods/domain/entity/User.java
 /workspace/flashfoods-backend/src/main/java/com/flashfoods/web/UserController.java
 /workspace/flashfoods-backend/src/main/java/com/flashfoods/domain/entity/Coupon.java

@@ -38,6 +38,7 @@ com/flashfoods/web/CartController.class
 com/flashfoods/web/MailService.class
 com/flashfoods/domain/entity/Restaurant.class
 com/flashfoods/web/AuthController.class
+com/flashfoods/seed/DataSeeder.class
 com/flashfoods/domain/repo/FavoriteRepository.class
 com/flashfoods/web/AuthController$ResetPasswordRequest.class
 com/flashfoods/web/OrderController.class
