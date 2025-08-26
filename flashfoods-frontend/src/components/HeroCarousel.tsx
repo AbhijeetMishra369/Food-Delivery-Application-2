@@ -4,10 +4,12 @@ import 'swiper/css/pagination'
 import { Pagination, Autoplay } from 'swiper/modules'
 
 const slides = [
-  'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1600&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1604908176997-431632bed5d8?q=80&w=1600&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1546069901-eacef0df6022?q=80&w=1600&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1600&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=2000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1604908176997-431632bed5d8?q=80&w=2000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1546069901-eacef0df6022?q=80&w=2000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=2000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=2000&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=2000&auto=format&fit=crop'
 ]
 
 export function HeroCarousel() {
