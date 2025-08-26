@@ -20,3 +20,7 @@
 6:58:00 AM [vite] (client) hmr update /src/pages/Cart.tsx, /src/index.css
 7:17:10 AM [vite] (client) hmr update /src/pages/Register.tsx, /src/index.css
 7:17:33 AM [vite] (client) hmr update /src/pages/AdminDashboard.tsx, /src/index.css
+8:24:08 AM [vite] (client) hmr update /src/index.css
+8:24:21 AM [vite] (client) hmr update /src/components/RestaurantCard.tsx, /src/index.css
+8:24:42 AM [vite] (client) hmr update /src/components/HeroCarousel.tsx, /src/index.css
+8:24:55 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css

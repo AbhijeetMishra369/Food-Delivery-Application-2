@@ -15,10 +15,10 @@ export type RestaurantCardProps = {
 export function RestaurantCard(props: RestaurantCardProps) {
   const { name, image, cuisine, rating, deliveryTimeMin, priceForTwo } = props
   return (
-    <Card className="rounded-xl shadow-sm hover:shadow-md transition">
+    <Card className="rounded-xl shadow-sm hover:shadow-md transition animate-floatIn">
       <CardActionArea>
         <div className="relative">
-          <CardMedia component="img" height="160" image={image} alt={name} />
+          <CardMedia component="img" height="160" image={image} alt={name} className="transition-transform duration-300 hover:scale-[1.03]" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           <IconButton size="small" className="!absolute top-2 right-2 bg-white/90">
             <FavoriteBorderIcon fontSize="small" />

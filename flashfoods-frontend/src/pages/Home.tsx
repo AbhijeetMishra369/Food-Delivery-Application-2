@@ -31,7 +31,7 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {restaurants.map(r => (
-          <RestaurantCard key={r.id} name={r.name} image={r.logoUrl || 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1200&auto=format&fit=crop'} cuisine={r.description || 'Popular picks'} rating={r.averageRating || 4.2} deliveryTimeMin={25} priceForTwo={'₹300 for two'} />
+          <RestaurantCard key={r.id} name={r.name} image={r.logoUrl || 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1600&auto=format&fit=crop'} cuisine={r.description || 'Popular picks'} rating={r.averageRating || 4.2} deliveryTimeMin={25} priceForTwo={'₹300 for two'} />
         ))}
       </div>
       <div className="space-y-2">
@@ -39,7 +39,7 @@ export default function Home() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
           {popular.map(p => (
             <div key={p.id} className="border rounded-lg overflow-hidden">
-              <img src={p.imageUrl || 'https://images.unsplash.com/photo-1548365328-9f547fb095de?q=80&w=800&auto=format&fit=crop'} className="w-full h-28 object-cover" />
+              <img src={p.imageUrl || 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop'} className="w-full h-28 object-cover transition-transform duration-300 hover:scale-[1.05]" />
               <div className="p-2 text-sm">
                 <div className="font-semibold truncate">{p.name}</div>
                 <div className="text-gray-600">₹{(p.priceCents/100).toFixed(0)}</div>
