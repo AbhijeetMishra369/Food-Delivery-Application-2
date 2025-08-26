@@ -2,6 +2,7 @@ import { Button, Divider, Stack, TextField, Typography } from '@mui/material'
 import { useEffect, useState } from 'react'
 import { useSnackbar } from 'notistack'
 import api from '../lib/api'
+import { useNavigate } from 'react-router-dom'
 
 type CartItem = { id: number; menuItem: { name: string }; quantity: number; lineTotalCents: number }
 
@@ -12,6 +13,7 @@ export default function Cart() {
   const [coupon, setCoupon] = useState('')
   const [isApplying, setIsApplying] = useState(false)
   const { enqueueSnackbar } = useSnackbar()
+  const navigate = useNavigate()
 
   const load = () => api.get('/api/cart').then(res => setCart(res.data)).catch(() => setCart({ items: [], subtotalCents: 0, discountCents: 0, totalCents: 0 }))
 
@@ -39,8 +41,28 @@ export default function Cart() {
   const checkout = async () => {
     try {
       const { data } = await api.post('/api/orders/create')
-      enqueueSnackbar(`Order created. Amount ₹${(data.amount/100).toFixed(0)}. Proceed to pay.`, { variant: 'info' })
-      // Integrate Razorpay here using data.amount and data.orderId
+      const createRes = await api.post('/api/payments/create?orderId=' + data.orderId)
+      const options: any = {
+        key: createRes.data.keyId,
+        amount: createRes.data.amount,
+        currency: createRes.data.currency,
+        name: 'FlashFoods',
+        description: 'Order payment',
+        order_id: createRes.data.orderId,
+        handler: async (resp: any) => {
+          try {
+            await api.post(`/api/payments/verify?orderId=${data.orderId}&razorpay_payment_id=${resp.razorpay_payment_id}&razorpay_order_id=${resp.razorpay_order_id}&razorpay_signature=${resp.razorpay_signature}`)
+            enqueueSnackbar('Payment successful ✔️', { variant: 'success' })
+            navigate(`/track?orderId=${data.orderId}`)
+          } catch {
+            enqueueSnackbar('Payment verification failed', { variant: 'error' })
+          }
+        },
+        prefill: {},
+        theme: { color: '#ff4d4f' }
+      }
+      const rz = new (window as any).Razorpay(options)
+      rz.open()
     } catch (e) {
       enqueueSnackbar('Could not create order. Please try again.', { variant: 'error' })
     }

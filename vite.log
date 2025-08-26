@@ -7,3 +7,16 @@
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: http://172.30.0.2:5173/
+6:15:07 AM [vite] (client) hmr update /src/pages/AdminDashboard.tsx, /src/index.css
+6:15:35 AM [vite] (client) hmr update /src/pages/Home.tsx, /src/index.css
+6:16:01 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+6:28:08 AM [vite] (client) hmr update /src/pages/Login.tsx, /src/index.css
+6:28:19 AM [vite] (client) hmr update /src/pages/Register.tsx, /src/index.css
+6:41:34 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+6:42:22 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+6:43:05 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
+6:43:27 AM [vite] (client) hmr update /src/pages/Cart.tsx, /src/index.css
+6:57:45 AM [vite] (client) page reload index.html
+6:58:00 AM [vite] (client) hmr update /src/pages/Cart.tsx, /src/index.css
+7:17:10 AM [vite] (client) hmr update /src/pages/Register.tsx, /src/index.css
+7:17:33 AM [vite] (client) hmr update /src/pages/AdminDashboard.tsx, /src/index.css

@@ -15,8 +15,13 @@ import Cart from './pages/Cart'
 import Orders from './pages/Orders'
 import Favorites from './pages/Favorites'
 import AdminDashboard from './pages/AdminDashboard'
+import AdminRoute from './components/AdminRoute'
 import ProtectedRoute from './components/ProtectedRoute'
 import { getCurrentUser } from './lib/auth'
+import AddressBook from './pages/AddressBook'
+import ForgotPassword from './pages/ForgotPassword'
+import ResetPassword from './pages/ResetPassword'
+import OrderTrack from './pages/OrderTrack'
 
 function App() {
   const user = getCurrentUser()
@@ -52,10 +57,14 @@ function App() {
           <Route path="/restaurant/:id" element={<RestaurantDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/favorites" element={<ProtectedRoute><Favorites /></ProtectedRoute>} />
           <Route path="/orders" element={<ProtectedRoute><Orders /></ProtectedRoute>} />
           <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
-          <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+          <Route path="/addresses" element={<ProtectedRoute><AddressBook /></ProtectedRoute>} />
+          <Route path="/track" element={<ProtectedRoute><OrderTrack /></ProtectedRoute>} />
+          <Route path="/admin" element={<ProtectedRoute><AdminRoute><AdminDashboard /></AdminRoute></ProtectedRoute>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Container>

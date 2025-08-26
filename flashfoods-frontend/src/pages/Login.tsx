@@ -3,11 +3,15 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import { useAppDispatch } from '../utils/hooks'
 import { login } from '../features/auth/authSlice'
+import { useSnackbar } from 'notistack'
+import { useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 
 export default function Login() {
   const dispatch = useAppDispatch()
+  const { enqueueSnackbar } = useSnackbar()
+  const navigate = useNavigate()
 
   const form = useFormik({
     initialValues: { email: '', password: '' },
@@ -15,7 +19,15 @@ export default function Login() {
       email: Yup.string().email('Enter a valid email').required('Email is required'),
       password: Yup.string().min(6, 'At least 6 characters').required('Password is required')
     }),
-    onSubmit: (values) => { dispatch(login(values)) }
+    onSubmit: async (values) => {
+      try {
+        await dispatch(login(values)).unwrap()
+        enqueueSnackbar('Logged in successfully', { variant: 'success' })
+        navigate('/')
+      } catch (e: any) {
+        enqueueSnackbar('Invalid email or password', { variant: 'error' })
+      }
+    }
   })
 
   return (

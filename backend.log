@@ -8,25 +8,25 @@
 
  :: Spring Boot ::                (v3.3.4)
 
-2025-08-25T19:56:25.630Z  INFO 6025 --- [           main] c.f.FlashfoodsBackendApplication         : Starting FlashfoodsBackendApplication using Java 21.0.7 with PID 6025 (/workspace/flashfoods-backend/target/classes started by ubuntu in /workspace/flashfoods-backend)
-2025-08-25T19:56:25.631Z  INFO 6025 --- [           main] c.f.FlashfoodsBackendApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-08-25T19:56:26.074Z  INFO 6025 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-25T19:56:26.105Z  INFO 6025 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 8 JPA repository interfaces.
-2025-08-25T19:56:26.475Z  INFO 6025 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-08-25T19:56:26.482Z  INFO 6025 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-08-25T19:56:26.482Z  INFO 6025 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2025-08-25T19:56:26.504Z  INFO 6025 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-08-25T19:56:26.505Z  INFO 6025 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 850 ms
-2025-08-25T19:56:26.585Z  INFO 6025 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-08-25T19:56:26.682Z  INFO 6025 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:flashfoods user=SA
-2025-08-25T19:56:26.682Z  INFO 6025 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-08-25T19:56:26.688Z  INFO 6025 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:flashfoods'
-2025-08-25T19:56:26.772Z  INFO 6025 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-25T19:56:26.794Z  INFO 6025 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-08-25T19:56:26.809Z  INFO 6025 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-08-25T19:56:26.931Z  INFO 6025 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-25T19:56:27.475Z  INFO 6025 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-25T19:56:27.508Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:16.047Z  INFO 14032 --- [           main] c.f.FlashfoodsBackendApplication         : Starting FlashfoodsBackendApplication using Java 21.0.7 with PID 14032 (/workspace/flashfoods-backend/target/classes started by ubuntu in /workspace/flashfoods-backend)
+2025-08-26T06:13:16.049Z  INFO 14032 --- [           main] c.f.FlashfoodsBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-08-26T06:13:16.638Z  INFO 14032 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-26T06:13:16.675Z  INFO 14032 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 8 JPA repository interfaces.
+2025-08-26T06:13:17.150Z  INFO 14032 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-26T06:13:17.158Z  INFO 14032 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-26T06:13:17.158Z  INFO 14032 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-08-26T06:13:17.184Z  INFO 14032 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-26T06:13:17.185Z  INFO 14032 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1099 ms
+2025-08-26T06:13:17.283Z  INFO 14032 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-26T06:13:17.398Z  INFO 14032 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:flashfoods user=SA
+2025-08-26T06:13:17.399Z  INFO 14032 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-26T06:13:17.405Z  INFO 14032 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:flashfoods'
+2025-08-26T06:13:17.497Z  INFO 14032 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-26T06:13:17.521Z  INFO 14032 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-08-26T06:13:17.535Z  INFO 14032 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-26T06:13:17.671Z  INFO 14032 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-26T06:13:18.327Z  INFO 14032 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-26T06:13:18.360Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     create table cart_items (
         id bigint generated by default as identity,
         line_total_cents integer,
@@ -35,7 +35,7 @@
         menu_item_id bigint not null,
         primary key (id)
     )
-2025-08-25T19:56:27.512Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.365Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     create table carts (
         id bigint generated by default as identity,
         discount_cents integer,
@@ -45,7 +45,7 @@
         user_id bigint not null,
         primary key (id)
     )
-2025-08-25T19:56:27.513Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.366Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     create table coupons (
         id bigint generated by default as identity,
         active boolean,
@@ -56,14 +56,14 @@
         valid_until timestamp(6) with time zone,
         primary key (id)
     )
-2025-08-25T19:56:27.514Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.367Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     create table favorites (
         id bigint generated by default as identity,
         restaurant_id bigint not null,
         user_id bigint not null,
         primary key (id)
     )
-2025-08-25T19:56:27.515Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.367Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     create table menu_items (
         id bigint generated by default as identity,
         available boolean,
@@ -74,7 +74,7 @@
         restaurant_id bigint not null,
         primary key (id)
     )
-2025-08-25T19:56:27.515Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.368Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     create table order_items (
         id bigint generated by default as identity,
         line_total_cents integer,
@@ -83,7 +83,7 @@
         order_id bigint not null,
         primary key (id)
     )
-2025-08-25T19:56:27.516Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.369Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     create table orders (
         id bigint generated by default as identity,
         created_at timestamp(6) with time zone,
@@ -97,7 +97,7 @@
         user_id bigint not null,
         primary key (id)
     )
-2025-08-25T19:56:27.517Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.370Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     create table restaurants (
         id bigint generated by default as identity,
         address varchar(255),
@@ -111,7 +111,7 @@
         owner_id bigint not null,
         primary key (id)
     )
-2025-08-25T19:56:27.517Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.370Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     create table reviews (
         id bigint generated by default as identity,
         comment varchar(255),
@@ -121,7 +121,7 @@
         user_id bigint not null,
         primary key (id)
     )
-2025-08-25T19:56:27.518Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.371Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     create table users (
         id bigint generated by default as identity,
         avatar_url varchar(255),
@@ -135,146 +135,1025 @@
         role enum ('ADMIN','CUSTOMER','OWNER') not null,
         primary key (id)
     )
-2025-08-25T19:56:27.519Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.372Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists carts 
        drop constraint if exists UK64t7ox312pqal3p7fg9o503c2
-2025-08-25T19:56:27.519Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.373Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists carts 
        add constraint UK64t7ox312pqal3p7fg9o503c2 unique (user_id)
-2025-08-25T19:56:27.520Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.374Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists coupons 
        drop constraint if exists UKeplt0kkm9yf2of2lnx6c1oy9b
-2025-08-25T19:56:27.520Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.374Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists coupons 
        add constraint UKeplt0kkm9yf2of2lnx6c1oy9b unique (code)
-2025-08-25T19:56:27.521Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.374Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists favorites 
        drop constraint if exists UKondol6dsj2oaeno5aui8hnmg3
-2025-08-25T19:56:27.521Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.375Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists favorites 
        add constraint UKondol6dsj2oaeno5aui8hnmg3 unique (user_id, restaurant_id)
-2025-08-25T19:56:27.522Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.376Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists users 
        drop constraint if exists UK6dotkott2kjsp8vw4d0m25fb7
-2025-08-25T19:56:27.522Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.376Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists users 
        add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (email)
-2025-08-25T19:56:27.522Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.376Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists cart_items 
        add constraint FKpcttvuq4mxppo8sxggjtn5i2c 
        foreign key (cart_id) 
        references carts
-2025-08-25T19:56:27.525Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.379Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists cart_items 
        add constraint FK5ishcgpt4w7kbpwmh9e0mio8s 
        foreign key (menu_item_id) 
        references menu_items
-2025-08-25T19:56:27.526Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.380Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists carts 
        add constraint FKrrm7rgln1isma5flmwv8rj2u7 
        foreign key (applied_coupon_id) 
        references coupons
-2025-08-25T19:56:27.527Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.381Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists carts 
        add constraint FKb5o626f86h46m4s7ms6ginnop 
        foreign key (user_id) 
        references users
-2025-08-25T19:56:27.527Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.382Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists favorites 
        add constraint FKntby5i9ckfbhd9spu3x1ef5oo 
        foreign key (restaurant_id) 
        references restaurants
-2025-08-25T19:56:27.528Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.382Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists favorites 
        add constraint FKk7du8b8ewipawnnpg76d55fus 
        foreign key (user_id) 
        references users
-2025-08-25T19:56:27.529Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.383Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists menu_items 
        add constraint FKhaqtoboitpl0n541y0sc753my 
        foreign key (restaurant_id) 
        references restaurants
-2025-08-25T19:56:27.529Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.384Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists order_items 
        add constraint FKdtfg1f49yr5yye2fpl2xid2xo 
        foreign key (menu_item_id) 
        references menu_items
-2025-08-25T19:56:27.530Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.385Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists order_items 
        add constraint FKbioxgbv59vetrxe0ejfubep1w 
        foreign key (order_id) 
        references orders
-2025-08-25T19:56:27.531Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.385Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists orders 
        add constraint FK2m9qulf12xm537bku3jnrrbup 
        foreign key (restaurant_id) 
        references restaurants
-2025-08-25T19:56:27.531Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.386Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists orders 
        add constraint FK32ql8ubntj5uh44ph9659tiih 
        foreign key (user_id) 
        references users
-2025-08-25T19:56:27.532Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.387Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists restaurants 
        add constraint FKp5mmmypepihvmkdb83qwugr4d 
        foreign key (owner_id) 
        references users
-2025-08-25T19:56:27.533Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.388Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists reviews 
        add constraint FKsu8ow2q842enesfbqphjrfi5g 
        foreign key (restaurant_id) 
        references restaurants
-2025-08-25T19:56:27.534Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.389Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     alter table if exists reviews 
        add constraint FKcgy7qjc1r99dp117y9en6lxye 
        foreign key (user_id) 
        references users
-2025-08-25T19:56:27.536Z  INFO 6025 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-25T19:56:27.761Z  INFO 6025 --- [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2025-08-25T19:56:27.762Z  WARN 6025 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2025-08-25T19:56:28.144Z  INFO 6025 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-08-25T19:56:28.435Z  INFO 6025 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-08-25T19:56:28.441Z  INFO 6025 --- [           main] c.f.FlashfoodsBackendApplication         : Started FlashfoodsBackendApplication in 3.001 seconds (process running for 3.16)
-2025-08-25T19:56:28.617Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:18.390Z  INFO 14032 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-26T06:13:18.618Z  INFO 14032 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-26T06:13:18.879Z  INFO 14032 --- [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-08-26T06:13:18.879Z  WARN 14032 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-08-26T06:13:19.275Z  INFO 14032 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-08-26T06:13:19.607Z  INFO 14032 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-26T06:13:19.614Z  INFO 14032 --- [           main] c.f.FlashfoodsBackendApplication         : Started FlashfoodsBackendApplication in 3.798 seconds (process running for 4.002)
+2025-08-26T06:13:19.698Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     select
         count(*) 
     from
         users u1_0
-2025-08-25T19:56:28.710Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:19.785Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         users
         (avatar_url, created_at, email, full_name, password_hash, phone, reset_token, reset_token_expires_at, role, id) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
-2025-08-25T19:56:28.794Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:19.868Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         users
         (avatar_url, created_at, email, full_name, password_hash, phone, reset_token, reset_token_expires_at, role, id) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
-2025-08-25T19:56:28.795Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:19.870Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         restaurants
         (address, average_rating, city, created_at, description, logo_url, name, owner_id, reviews_count, id) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
-2025-08-25T19:56:28.797Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:19.871Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         menu_items
         (available, description, image_url, name, price_cents, restaurant_id, id) 
     values
         (?, ?, ?, ?, ?, ?, default)
-2025-08-25T19:56:28.798Z DEBUG 6025 --- [           main] org.hibernate.SQL                        : 
+2025-08-26T06:13:19.873Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         menu_items
         (available, description, image_url, name, price_cents, restaurant_id, id) 
     values
         (?, ?, ?, ?, ?, ?, default)
-2025-08-25T19:56:35.597Z  INFO 6025 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-25T19:56:35.598Z  INFO 6025 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-08-25T19:56:35.599Z  INFO 6025 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-26T06:13:19.901Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-08-26T06:13:19.972Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (avatar_url, created_at, email, full_name, password_hash, phone, reset_token, reset_token_expires_at, role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:19.973Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-08-26T06:13:20.043Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (avatar_url, created_at, email, full_name, password_hash, phone, reset_token, reset_token_expires_at, role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.045Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2025-08-26T06:13:20.114Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (avatar_url, created_at, email, full_name, password_hash, phone, reset_token, reset_token_expires_at, role, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.117Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    select
+        count(*) 
+    from
+        restaurants r1_0
+2025-08-26T06:13:20.124Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.avatar_url,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.reset_token,
+        u1_0.reset_token_expires_at,
+        u1_0.role 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2025-08-26T06:13:20.127Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        restaurants
+        (address, average_rating, city, created_at, description, logo_url, name, owner_id, reviews_count, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.128Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.129Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.130Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.132Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.133Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.133Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.134Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.135Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.136Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.137Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.138Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.139Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        restaurants
+        (address, average_rating, city, created_at, description, logo_url, name, owner_id, reviews_count, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.140Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.144Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.145Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.146Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.147Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.148Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.149Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.149Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.150Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.151Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.152Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.153Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        restaurants
+        (address, average_rating, city, created_at, description, logo_url, name, owner_id, reviews_count, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.154Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.155Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.156Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.157Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.158Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.159Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.160Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.161Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.162Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.163Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.164Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.164Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        restaurants
+        (address, average_rating, city, created_at, description, logo_url, name, owner_id, reviews_count, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.165Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.166Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.167Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.168Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.169Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.169Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.170Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.171Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.172Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.173Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        restaurants
+        (address, average_rating, city, created_at, description, logo_url, name, owner_id, reviews_count, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.174Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.174Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.175Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.176Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.178Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.179Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.180Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.181Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.182Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.183Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.184Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        restaurants
+        (address, average_rating, city, created_at, description, logo_url, name, owner_id, reviews_count, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.185Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.185Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.186Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.187Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.188Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.189Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.190Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.191Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.191Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.192Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.194Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        restaurants
+        (address, average_rating, city, created_at, description, logo_url, name, owner_id, reviews_count, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.195Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.196Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.197Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.198Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.199Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.200Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.200Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.201Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.202Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.203Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.204Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.205Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        restaurants
+        (address, average_rating, city, created_at, description, logo_url, name, owner_id, reviews_count, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.205Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.206Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.207Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.207Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.208Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.209Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.209Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.210Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.211Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.211Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.212Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.212Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        restaurants
+        (address, average_rating, city, created_at, description, logo_url, name, owner_id, reviews_count, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.213Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.214Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.214Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.215Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.216Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.216Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.217Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.217Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.218Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.219Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.219Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        restaurants
+        (address, average_rating, city, created_at, description, logo_url, name, owner_id, reviews_count, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.220Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.221Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.221Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.222Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.222Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.223Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.224Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.224Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.225Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.226Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.227Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+2025-08-26T06:13:20.227Z DEBUG 14032 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (available, description, image_url, name, price_cents, restaurant_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)

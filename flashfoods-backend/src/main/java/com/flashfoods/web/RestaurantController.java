@@ -27,8 +27,12 @@ public class RestaurantController {
     }
 
     @GetMapping
-    public List<Restaurant> list() {
-        return restaurantRepository.findAll();
+    public List<Restaurant> list(@RequestParam(value = "q", required = false) String q) {
+        if (q == null || q.isBlank()) {
+            return restaurantRepository.findAll();
+        }
+        String term = "%" + q.toLowerCase() + "%";
+        return restaurantRepository.search(term);
     }
 
     @GetMapping("/{id}")
