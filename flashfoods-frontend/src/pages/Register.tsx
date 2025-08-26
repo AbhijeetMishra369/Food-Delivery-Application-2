@@ -4,11 +4,15 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import { useAppDispatch } from '../utils/hooks'
 import { register } from '../features/auth/authSlice'
+import { useSnackbar } from 'notistack'
+import { useNavigate } from 'react-router-dom'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 
 export default function Register() {
   const dispatch = useAppDispatch()
+  const { enqueueSnackbar } = useSnackbar()
+  const navigate = useNavigate()
 
   const form = useFormik({
     initialValues: { fullName: '', email: '', password: '' },
@@ -17,7 +21,15 @@ export default function Register() {
       email: Yup.string().email('Enter a valid email').required('Email is required'),
       password: Yup.string().min(6, 'At least 6 characters').required('Password is required')
     }),
-    onSubmit: (values) => { dispatch(register(values)) }
+    onSubmit: async (values) => {
+      try {
+        await dispatch(register(values)).unwrap()
+        enqueueSnackbar('Account created. You are now logged in.', { variant: 'success' })
+        navigate('/')
+      } catch (e: any) {
+        enqueueSnackbar('Could not create account', { variant: 'error' })
+      }
+    }
   })
 
   return (
