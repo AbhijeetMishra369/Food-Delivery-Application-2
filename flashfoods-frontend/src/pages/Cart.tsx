@@ -2,6 +2,7 @@ import { Button, Divider, Stack, TextField, Typography } from '@mui/material'
 import { useEffect, useState } from 'react'
 import { useSnackbar } from 'notistack'
 import api from '../lib/api'
+import { useNavigate } from 'react-router-dom'
 
 type CartItem = { id: number; menuItem: { name: string }; quantity: number; lineTotalCents: number }
 
@@ -12,6 +13,7 @@ export default function Cart() {
   const [coupon, setCoupon] = useState('')
   const [isApplying, setIsApplying] = useState(false)
   const { enqueueSnackbar } = useSnackbar()
+  const navigate = useNavigate()
 
   const load = () => api.get('/api/cart').then(res => setCart(res.data)).catch(() => setCart({ items: [], subtotalCents: 0, discountCents: 0, totalCents: 0 }))
 
@@ -39,8 +41,11 @@ export default function Cart() {
   const checkout = async () => {
     try {
       const { data } = await api.post('/api/orders/create')
-      enqueueSnackbar(`Order created. Amount ₹${(data.amount/100).toFixed(0)}. Proceed to pay.`, { variant: 'info' })
-      // Integrate Razorpay here using data.amount and data.orderId
+      enqueueSnackbar(`Order created. Amount ₹${(data.amount/100).toFixed(0)}. Proceeding to payment...`, { variant: 'info' })
+      const payment = await api.post('/api/payments/create?orderId=' + data.orderId)
+      await api.post(`/api/payments/verify?orderId=${data.orderId}&paymentSession=${encodeURIComponent(payment.data.paymentSession)}`)
+      enqueueSnackbar('Payment successful ✔️', { variant: 'success' })
+      navigate(`/track?orderId=${data.orderId}`)
     } catch (e) {
       enqueueSnackbar('Could not create order. Please try again.', { variant: 'error' })
     }

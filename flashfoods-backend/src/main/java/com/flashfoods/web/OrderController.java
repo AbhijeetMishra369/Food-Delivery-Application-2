@@ -88,5 +88,23 @@ public class OrderController {
         orderRepository.save(order);
         return ResponseEntity.ok(order);
     }
+
+    @GetMapping("/{orderId}/track")
+    public ResponseEntity<?> track(@PathVariable Long orderId) {
+        Order order = orderRepository.findById(orderId).orElse(null);
+        if (order == null) return ResponseEntity.notFound().build();
+        // Mock tracking: convert order status into a delivery timeline
+        return ResponseEntity.ok(new Object() {
+            public final Long id = order.getId();
+            public final String status = order.getStatus().name();
+            public final String eta = switch (order.getStatus()) {
+                case CREATED -> "40 mins";
+                case PAID, PREPARING -> "30 mins";
+                case DISPATCHED -> "15 mins";
+                case DELIVERED -> "0 mins";
+                case CANCELLED -> "-";
+            };
+        });
+    }
 }
 
